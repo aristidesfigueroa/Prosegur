@@ -1,0 +1,42 @@
+<pcml version="6.0">  
+<struct name="VARIABLES">
+   <data name="CHANNEL" type="char" length="20" usage="inherit" />
+   <data name="USER" type="char" length="20" usage="inherit" />
+   <data name="PASS" type="char" length="20" usage="inherit" />
+   <data name="REFERENCE_CODE" type="char" length="20" usage="inherit" />
+   <data name="FIRST_NAME" type="char" length="40" usage="inherit" />
+   <data name="LAST_NAME" type="char" length="40" usage="inherit" />
+</struct>
+<program name="PAY_CASHTRANSACTION" entrypoint="PAY_CASHTRANSACTION">   
+   <data name="JSONIN" type="char" length="3000" usage="inputoutput" /> 
+   <data name="JSONOUT" type="char" length="3000" usage="inputoutput" />
+</program>                                                       
+<program name="PAY_GETSERVICERESPONSE" entrypoint="PAY_GETSERVICERESPONSE"> 
+   <data name="XMLREQUEST" type="char" length="32767" usage="input" />
+   <data name="XML" type="char" length="32767" usage="inputoutput" /> 
+</program>                                                  
+<program name="PAY_TRANSFERSTATUS" entrypoint="PAY_TRANSFERSTATUS">    
+   <data name="CHANNEL" type="char" length="20" usage="input" />       
+   <data name="USER" type="char" length="20" usage="input" />          
+   <data name="PASS" type="char" length="20" usage="input" />          
+   <data name="REFERENCE_CODE" type="char" length="20" usage="input" />
+   <data name="XML" type="char" length="32767" usage="inputoutput" />  
+</program> 
+<program name="PAY_ACCOUNTSEARCH" entrypoint="PAY_ACCOUNTSEARCH">       
+   <data name="CHANNEL" type="char" length="20" usage="input" />        
+   <data name="USER" type="char" length="20" usage="input" />           
+   <data name="PASS" type="char" length="20" usage="input" />           
+   <data name="ACCOUNT_NUMBER" type="char" length="20" usage="input" /> 
+   <data name="ADDITIONAL_INFO" type="char" length="50" usage="input" />
+   <data name="XML" type="char" length="32767" usage="inputoutput" />   
+</program>
+<program name="PAY_PAYOUTTRANSFER" entrypoint="PAY_PAYOUTTRANSFER">     
+   <data name="VAR" type="struct" struct="VARIABLES" usage="inputoutput" />    
+   <data name="ACCOUNT_NUMBER" type="char" length="20" usage="input" /> 
+   <data name="CONCEPT" type="char" length="100" usage="input" />       
+   <data name="AMOUNT" type="char" length="15" usage="input" />         
+   <data name="CURRENCY_CODE" type="char" length="3" usage="input" />   
+   <data name="ADDITIONAL_INFO" type="char" length="50" usage="input" />
+   <data name="XML" type="char" length="32767" usage="inputoutput" />   
+</program>                                                                                                        
+</pcml>
