@@ -19,7 +19,7 @@ import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import static utilities.AS400ToolboxJarMaker.AS400;
+//import static utilities.AS400ToolboxJarMaker.AS400; // Esta linea marca warnig 
 
 /**
  * REST Web Service
